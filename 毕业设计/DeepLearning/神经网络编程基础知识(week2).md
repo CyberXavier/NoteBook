@@ -7,7 +7,7 @@
 
 如图1-1：
 
-![损失函数](E:\MySoftware\LearningRelated\Markdown\TheDocument\MyNotes\毕业设计\DeepLearning\image\lostfunction.PNG)
+![损失函数](https://github.com/CyberXavier/NoteBook/blob/main/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/DeepLearning/image/lostfunction.PNG)
 
 【解析】：损失函数误差平方法：L(pre_y , rel_y) = 1/2(pre_y^2 - rel_y^2)^2	{梯度下降法不太好用所以再逻辑回归中用一个不同的损失函数，它看起来与误差平方相似的作用（见图1-1）并且损失函数只适用于单个训练样本}
 
