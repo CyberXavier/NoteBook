@@ -10,6 +10,12 @@
 
 
 
+## 目录
+
+* [errno 10054问题解决](# OpenSSL SSL_read: Connection was reset, errno 10054)
+
+
+
 ### （1）系统配置文件与全局用户文件
 
 > ***查看系统配置文件***
@@ -135,4 +141,51 @@ git branch -d [branch-name]
 git push origin --delete [branch-name]
 git branch -dr [remote/branch]
 ~~~
+
+
+
+### OpenSSL SSL_read: Connection was reset, errno 10054
+
+**Solution1: （原因）自己配置的用户名，邮箱可能输入错误了。**
+查看用户名，邮箱
+
+```bash
+git config user.name
+git config user.email</code>
+```
+
+修改，用户名，邮箱
+
+```bash
+git config --global user.name "xxx"
+git config --global user.email "xxx"
+```
+
+移除仓库，重新添加
+
+```bash
+git remote rm origin
+git remote add origin https://github.com/XXX
+```
+
+**Solution2: 修改解除SSL认证。**
+在Git Bash中输入以下命令：
+
+```bash
+git config --global http.sslVerify "false"
+```
+
+**Solution3: （原因）文件太大了。**
+改为500MB，在Git Bash中输入以下命令：
+
+```bash
+git config http.postBuffer 5242880003
+```
+
+**Solution4: （原因）更新DNS缓存。**
+在cmd中输入以下命令：
+
+```bash
+ipconfig /flushdns
+```
 
