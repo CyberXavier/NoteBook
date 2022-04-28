@@ -12,7 +12,7 @@
 
 ## 目录
 
-* [errno 10054问题解决](# OpenSSL SSL_read: Connection was reset, errno 10054)
+* [OpenSSL SSL_read: Connection was reset, errno 10054](# errno 10054问题解决)
 
 
 
@@ -144,7 +144,7 @@ git branch -dr [remote/branch]
 
 
 
-### OpenSSL SSL_read: Connection was reset, errno 10054
+### errno 10054问题解决
 
 **Solution1: （原因）自己配置的用户名，邮箱可能输入错误了。**
 查看用户名，邮箱
